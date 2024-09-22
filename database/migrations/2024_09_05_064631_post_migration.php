@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('content');
+            $table->string('judul');
+            $table->string('penulis');
+            $table->integer('harga');
+            $table->date('tgl_terbit');
             $table->timestamps();
         });
     }
